@@ -7,15 +7,45 @@
     <title>ECORIDE</title>
 </head>
 <body>
+
     <header>
-        ECORIDE
-    </header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light py-3">
+          <div class="container">
+            <a class="navbar-brand text-success fw-bold fs-3" href="/">EcoRide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-secondary fs-5" href="/">Accueil</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link text-secondary fs-5" href="#">Covoiturage</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-secondary fs-5" href="#">Contact</a>
+                </li>
+              </ul>
+              <div class="d-flex ms-auto">
+                <button class="btn btn-outline-success me-2 fs-5">Se connecter</button>
+                <button class="btn btn-success fs-5">S'inscrire</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
     <main id="main-page">
         <!-- Le contenu de la page-->
     </main>
-    <footer>
-        FOOTER
-    </footer>
+    <footer class="py-4 bg-light border-top">
+        <div class="container text-center text-secondary">
+          <p>Contactez-nous : <a href="mailto:contact@ecoride.fr" class="text-success">contact@ecoride.fr</a></p>
+          <p><a href="/mentions-legales" class="text-secondary">Mentions Légales</a></p>
+        </div>
+      </footer>
     <script type="module" src="Router/Router.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
