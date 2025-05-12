@@ -1,1 +1,219 @@
 @import'custom';
+
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif; /* Or choose a different clean font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa; /* Light grey background for the page */
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: #e9f7ef; /* A very light green background */
+    color: #155724; /* Dark green color for text */
+}
+
+.hero h1 {
+    color: #0f5132; /* Even darker green for the main heading */
+    font-weight: 700;
+}
+
+.hero .lead {
+    color: #0c6120; /* Green color for the lead paragraph */
+}
+
+.hero .btn-success {
+    background-color: #28a745; /* Bootstrap green */
+    border-color: #28a745;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero .btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #1e7e34;
+}
+
+.hero .btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero .btn-outline-success:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.hero img {
+    max-height: 300px; /* Limit image height */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+    border: 5px solid #28a745; /* Add a green border */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Enhance shadow */
+}
+
+/* Presentation Section Styling */
+.presentation {
+    background-color: #ffffff; /* White background */
+}
+
+.presentation h2 {
+     color: #0f5132; /* Dark green for heading */
+     font-weight: 700;
+}
+
+.presentation h3 {
+    color: #28a745; /* Green for feature titles */
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.presentation .text-muted {
+    color: #5a6268 !important; /* A slightly darker muted text for better readability */
+}
+
+.presentation .lead {
+     color: #0c6120; /* Green color for the lead paragraph */
+     font-style: italic;
+}
+
+.presentation .col-md-4 div {
+    /* Styling for the emoji containers */
+    color: #28a745; /* Green color for emojis */
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments (optional but recommended) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust heading size on smaller screens */
+        text-align: center;
+    }
+    .hero .lead {
+        text-align: center;
+    }
+    .hero .d-flex {
+        justify-content: center; /* Center buttons on small screens */
+    }
+    .hero img {
+        margin-top: 30px; /* Add space above image on small screens */
+        max-height: 300px;
+    }
+    .presentation .col-md-4 {
+        margin-bottom: 30px; /* Add space between feature columns on small screens */
+    }
+}
+
+/* Filters Section Styling */
+.filters-bar {
+     background-color: #f8f9fa; /* Match body background, slight contrast to search bar */
+     border-bottom: 1px solid #e9ecef; /* Subtle separator */
+}
+
+.filters-bar h3 {
+    color: #5a6268; /* Muted color for filter title */
+}
+
+.filters-bar .form-label {
+    font-weight: 600; /* Make filter labels slightly bolder */
+}
+
+.filters-bar .input-group-text {
+    background-color: #e9ecef; /* Light background for addon */
+    border-color: #ced4da;
+}
+
+/* Results Section Styling */
+.results-list h2 {
+     color: #0f5132; /* Dark green for heading */
+     font-weight: 700;
+}
+
+.results-list .card {
+    border: 1px solid #e9ecef; /* Subtle border */
+    margin-bottom: 15px; /* Space between cards */
+     transition: transform 0.2s ease-in-out;
+}
+
+.results-list .card:hover {
+     transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.results-list .card-title {
+    color: #0f5132; /* Dark green for driver name */
+    font-size: 1.1rem;
+}
+
+.results-list .card-text.small {
+     font-size: 0.85rem;
+}
+
+.results-list .rounded-circle {
+     width: 50px; /* Fixed size for driver photo */
+     height: 50px;
+     object-fit: cover;
+     border: 2px solid #28a745; /* Green border around photo */
+}
+
+.results-list .badge {
+    font-size: 0.9rem;
+}
+
+/* Specific badge for ecological */
+.results-list .badge.bg-success {
+    background-color: #28a745 !important; /* Ensure it's the desired green */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .hero .lead {
+        text-align: center;
+    }
+    .hero img {
+        margin-top: 30px;
+        max-height: 200px;
+    }
+    /* Adjust search bar layout */
+    .search-bar form .col-md-4,
+    .search-bar form .col-md-3,
+    .search-bar form .col-auto {
+        width: 95%; /* Make inputs and button wider */
+         margin-bottom: 10px; /* Add space between stacked elements */
+    }
+     .search-bar form .col-auto button {
+         width: 100%;
+     }
+
+     /* Adjust filters layout */
+      .filters-bar .col-md-auto,
+      .filters-bar .col-md-3,
+       .filters-bar .col-auto {
+        width: 95%; /* Make filter items wider */
+         margin-bottom: 10px; /* Add space between stacked elements */
+       }
+       .filters-bar .col-auto button {
+           width: 100%;
+       }
+
+     /* Adjust results card buttons */
+      .results-list .card .col-md-3.text-end {
+         text-align: start !important; /* Align text to start on small screens */
+         margin-top: 15px;
+     }
+      .results-list .card .d-flex {
+         justify-content: start !important; /* Align buttons to start on small screens */
+         margin-top: 10px;
+      }
+       .results-list .card .btn {
+           flex-grow: 1; /* Make buttons fill space */
+       }
+        .results-list .card .me-2 {
+            margin-right: 5px !important; /* Adjust button spacing */
+        }
+}

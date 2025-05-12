@@ -1,15 +1,22 @@
-// Custom.scss
-// Option A: Include all of Bootstrap
-
 // Include any default variable overrides here (though functions won't be available)
+// Primary color: A deep, sophisticated forest green for main branding and headings
+$primary: #1A531A;
 
-$primary: #A8C686;
-$secondary: #87CEEB;
-$bg: #F5F5F5;
-$text: #2E2E2E;
-$font-family-sans-serif: "Lato", "Montserrat", sans-serif !default;
-$font-family-serif: "Open Sans","Roboto", serif !default;
+// Success color: A vibrant, action-oriented green for buttons and positive indicators
+$success: #4CAF50;
+
+// Secondary color: A lighter, earthy green for subtle elements or borders (optional, can rely more on primary/success/dark)
+$secondary: #8BC34A; // Could also use for certain text highlights
+
+// Info color: A refreshing accent color, perhaps a light blue or teal, for links or specific info
+$info: #4DD0E1; // Material Design Cyan
+
+// Backgrounds
+$white: #FFFFFF; // Pure white for clean sections
+$light: #f9fbf9; // A very subtle off-white/light grey for alternating sections
+
+// Text colors
+$dark: #2E2E2E; // Dark grey for main body text
+$text-muted: #6c757d; // Standard muted text color
 
 @import "../node_modules/bootstrap/scss/bootstrap";
-
-// Then add additional custom code here
