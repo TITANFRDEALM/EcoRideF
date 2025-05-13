@@ -12065,4 +12065,29 @@ body {
 }
 .form-label {
   color: #1A531A;
+}
+
+/* Masque le conteneur du formulaire par défaut */
+#settingsFormContainer {
+  display: none;
+}
+
+/* Optionnel: ajuster la marge sous le titre/bouton */
+.settings-title-container {
+  margin-bottom: 20px; /* Ajoute un espace sous le "bouton" titre */
+}
+
+/* Optionnel: Centrer le bouton si nécessaire, bien que text-center sur le parent aide */
+.settings-title-container .btn {
+  /* display: inline-block; par défaut avec .btn */
+  /* Si vous voulez qu'il prenne toute la largeur, ajoutez display: block; width: 100%; */
+}
+
+/* Masque le formulaire chauffeur par défaut */
+#chauffeur-form {
+  display: none;
+  border: 1px solid #dee2e6; /* Ajoute une petite bordure pour le délimiter */
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */
