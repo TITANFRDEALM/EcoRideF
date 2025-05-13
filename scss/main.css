@@ -12062,4 +12062,7 @@ body {
   .results-list .card .me-2 {
     margin-right: 5px !important; /* Adjust button spacing */
   }
+}
+.form-label {
+  color: #1A531A;
 }/*# sourceMappingURL=main.css.map */
