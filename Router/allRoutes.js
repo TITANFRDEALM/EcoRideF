@@ -7,6 +7,8 @@ export const allRoutes = [
     new Route("/register" , "S'enregistrer", "/Pages/Auth/register.html", "/JS/Auth/register.js"),
     new Route("/account" , "Mon profil", "Pages/Auth/account.html", "JS/Auth/account.js"),
     new Route("/covoiturage" , "Covoiturage", "/Pages/covoiturage.html", "/JS/covoiturage.js"),
+    new Route("/rider" , "Proposer un trajet", "/Pages/rider.html", "/JS/rider.js"),
+    new Route("/detailsRide" , "Détails covoiturage", "/Pages/detailsRide.html", "/JS/detailsRide.js"),
     new Route("/contact" , "Contact", "/Pages/contact.html"),
 ];
 

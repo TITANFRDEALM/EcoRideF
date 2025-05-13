@@ -12090,4 +12090,15 @@ body {
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
+}
+
+/* Cache les sections filtre et résultats par défaut */
+#filters-section,
+#results-section {
+  display: none;
+}
+
+/* Style pour le message "aucun résultat" s'il est visible */
+#no-results-message.d-none {
+  display: none !important; /* Assure que Bootstrap d-none est bien surchargé quand on veut l'afficher */
 }/*# sourceMappingURL=main.css.map */

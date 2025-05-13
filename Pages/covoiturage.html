@@ -6,7 +6,7 @@
                 <p class="lead text-secondary mb-4">Recherchez un trajet en covoiturage et rejoignez la communauté EcoRide.</p>
                 </div>
             <div class="col-md-6 text-center">
-                <img src="https://via.placeholder.com/500x300?text=EcoRide+Illustration" alt="Covoiturage écologique illustration" class="img-fluid rounded shadow-sm">
+                <img src="" alt="Covoiturage écologique illustration" class="img-fluid rounded shadow-sm">
             </div>
         </div>
     </div>
@@ -21,11 +21,11 @@
                 <input type="text" class="form-control form-control-lg" id="departure" placeholder="Ville de départ" required>
             </div>
             <div class="col-md-4">
-                 <label for="destination" class="form-label visually-hidden">Destination</label>
+                <label for="destination" class="form-label visually-hidden">Destination</label>
                 <input type="text" class="form-control form-control-lg" id="destination" placeholder="Ville d'arrivée" required>
             </div>
-             <div class="col-md-3">
-                 <label for="travel-date" class="form-label visually-hidden">Date</label>
+            <div class="col-md-3">
+                <label for="travel-date" class="form-label visually-hidden">Date</label>
                 <input type="date" class="form-control form-control-lg" id="travel-date" required>
             </div>
             <div class="col-auto">
@@ -35,7 +35,7 @@
     </div>
 </section>
 
- <section id="filters-section" class="filters-bar py-4 bg-white d-none">
+<section id="filters-section" class="filters-bar py-4 bg-white">
     <div class="container">
         <h3 class="text-center text-secondary mb-3">Filtrer les résultats</h3>
         <div class="row g-3 justify-content-center">
@@ -47,44 +47,119 @@
                     </label>
                 </div>
             </div>
-             <div class="col-md-3">
+            <div class="col-md-3">
                 <label for="filter-price" class="form-label visually-hidden">Prix Max</label>
                 <div class="input-group">
                     <input type="number" class="form-control" id="filter-price" placeholder="Prix Max" min="0" step="any">
-                     <span class="input-group-text">€</span>
+                    <span class="input-group-text">€</span>
                 </div>
             </div>
-             <div class="col-md-3">
-                 <label for="filter-duration" class="form-label visually-hidden">Durée Max (min)</label>
-                 <div class="input-group">
-                     <input type="number" class="form-control" id="filter-duration" placeholder="Durée Max (min)" min="1">
-                     <span class="input-group-text">min</span>
+            <div class="col-md-3">
+                <label for="filter-duration" class="form-label visually-hidden">Durée Max (min)</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" id="filter-duration" placeholder="Durée Max (min)" min="1">
+                    <span class="input-group-text">min</span>
                 </div>
             </div>
              <div class="col-md-3">
                  <label for="filter-rating" class="form-label visually-hidden">Note Min</label>
                  <div class="input-group">
-                    <input type="number" class="form-control" id="filter-rating" placeholder="Note Min (0-5)" min="0" max="5" step="0.1">
-                    <span class="input-group-text"><i class="fas fa-star text-warning"></i></span>
-                </div>
-            </div>
-             <div class="col-auto">
-                <button type="button" id="reset-filters" class="btn btn-outline-secondary">Réinitialiser</button>
+                     <input type="number" class="form-control" id="filter-rating" placeholder="Note Min (0-5)" min="0" max="5" step="0.1">
+                     <span class="input-group-text"><i class="fas fa-star text-warning"></i></span>
+                 </div>
              </div>
+            <div class="col-auto">
+                <button type="button" id="reset-filters" class="btn btn-outline-secondary">Réinitialiser</button>
+            </div>
         </div>
     </div>
 </section>
 
-
-<section id="results-section" class="results-list py-5 d-none">
+<section id="results-section" class="results-list py-5">
     <div class="container">
         <h2 class="text-center text-success fw-bold mb-4">Résultats de la recherche</h2>
 
         <div id="no-results-message" class="alert alert-warning text-center d-none" role="alert">
             Aucun covoiturage trouvé pour cette date et cet itinéraire. Essayez une autre date !
-             </div>
+        </div>
 
         <div id="ride-listings" class="row row-cols-1 g-3">
+
+            <div class="col fictitious-ride-listing" data-id="1" data-departure="paris" data-destination="lyon" data-price="35" data-duration="240" data-rating="4.5" data-eco="false">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h5 class="card-title mb-0">Paris <i class="bi bi-arrow-right"></i> Lyon</h5>
+                                <p class="card-text text-muted small">Départ: 08:00</p>
+                            </div>
+                            <div class="text-end">
+                                <h5 class="card-title text-success mb-0">35 €</h5>
+                                <p class="card-text text-muted small">2 place(s)</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p class="mb-0">Conducteur: Jean Dupont</p>
+                                <p class="mb-0 text-muted small">Voiture: Peugeot 308</p>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-sm view-detail-btn" onclick="routeEvent(event)">Voir le trajet</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-    </div>
+
+            <div class="col fictitious-ride-listing" data-id="2" data-departure="lyon" data-destination="marseille" data-price="28" data-duration="180" data-rating="4.0" data-eco="true">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h5 class="card-title mb-0">Lyon <i class="bi bi-arrow-right"></i> Marseille</h5>
+                                <p class="card-text text-muted small">Départ: 14:30</p>
+                            </div>
+                            <div class="text-end">
+                                <h5 class="card-title text-success mb-0">28 €</h5>
+                                <p class="card-text text-muted small">3 place(s)</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                             <div>
+                                <p class="mb-0">Conducteur: Sophie Martin</p>
+                                <p class="mb-0 text-muted small">Voiture: Renault Clio</p>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-sm view-detail-btn" onclick="routeEvent(event)">Voir le trajet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col fictitious-ride-listing" data-id="3" data-departure="paris" data-destination="lyon" data-price="32" data-duration="220" data-rating="4.8" data-eco="false">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h5 class="card-title mb-0">Paris <i class="bi bi-arrow-right"></i> Lyon</h5>
+                                <p class="card-text text-muted small">Départ: 10:00</p>
+                            </div>
+                            <div class="text-end">
+                                <h5 class="card-title text-success mb-0">32 €</h5>
+                                <p class="card-text text-muted small">1 place(s)</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p class="mb-0">Conducteur: Pierre Dubois</p>
+                                <p class="mb-0 text-muted small">Voiture: Citroën C4</p>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-sm view-detail-btn" onclick="routeEvent(event)">Voir le trajet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div> </div>
 </section>

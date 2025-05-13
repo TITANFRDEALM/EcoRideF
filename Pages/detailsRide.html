@@ -1,0 +1,68 @@
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center text-primary fw-bold mb-4">Détails du Trajet</h2>
+
+        <div id="trip-details-container">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h3 id="detail-trip-route" class="card-title mb-3">Ville Départ <i class="bi bi-arrow-right"></i> Ville Arrivée</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-1"><strong>Date :</strong> <span id="detail-trip-date">Date</span></p>
+                            <p class="mb-1"><strong>Heure de départ :</strong> <span id="detail-trip-time">Heure</span></p>
+                            <p class="mb-1"><strong>Prix par place :</strong> <span id="detail-trip-price">Prix €</span></p>
+                            <p class="mb-1"><strong>Places restantes :</strong> <span id="detail-trip-seats">Nb places</span></p>
+                        </div>
+                        <div class="col-md-6">
+                             <p class="mb-1"><strong>Commentaires :</strong> <span id="detail-trip-details">Détails du trajet...</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Informations Conducteur</h4>
+                    <div class="d-flex align-items-center mb-3">
+                         <img src="https://placehold.co/80x80/007bff/ffffff?text=Avatar" class="driver-avatar me-3" alt="Avatar Conducteur"> <div>
+                            <p class="mb-0"><strong>Nom :</strong> <span id="detail-driver-name">Nom du Conducteur</span></p>
+                            <p class="mb-0"><strong>Note moyenne :</strong> <span id="detail-driver-rating">4.5</span> <i class="fas fa-star text-warning"></i></p>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-3 mb-2">Véhicule</h5>
+                    <p class="mb-1"><strong>Marque et Modèle :</strong> <span id="detail-car-model">Marque Modèle</span></p>
+                    <p class="mb-1"><strong>Énergie :</strong> <span id="detail-car-energy">Énergie</span> <span id="detail-car-eco-icon"><i class="fas fa-leaf text-success"></i></span></p>
+
+
+                    <h5 class="mt-3 mb-2">Préférences</h5>
+                    <p id="detail-driver-preferences">Préférences du conducteur (Fumeur, Animaux, etc.)</p>
+
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Avis sur Nom du Conducteur</h4>
+                    <div id="driver-reviews-list">
+                        <div class="review-item">
+                            <p class="mb-1"><strong>Utilisateur A</strong> <span class="text-muted small">- Note : 5 <i class="fas fa-star text-warning"></i></span></p>
+                            <p class="mb-0">Commentaire de l'avis A.</p>
+                        </div>
+                         <div class="review-item">
+                            <p class="mb-1"><strong>Utilisateur B</strong> <span class="text-muted small">- Note : 4 <i class="fas fa-star text-warning"></i></span></p>
+                            <p class="mb-0">Commentaire de l'avis B.</p>
+                        </div>
+                        </div>
+                     <p id="no-reviews-message" class="text-muted text-center" style="display: none;">Aucun avis pour le moment.</p>
+                </div>
+            </div>
+
+             <div class="text-center mt-4">
+                 <a href="/covoiturage" class="btn btn-secondary me-2">Retour à la recherche</a>
+                 <button class="btn btn-success">Réserver ce trajet</button>
+             </div>
+
+        </div>
+    </div>
+</section>

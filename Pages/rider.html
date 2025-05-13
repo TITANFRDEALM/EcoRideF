@@ -1,0 +1,53 @@
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center text-primary fw-bold mb-4">Proposer un nouveau trajet</h2>
+
+        <form id="propose-trajet-form">
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <label for="propose-departure" class="form-label">Ville de départ</label>
+                    <input type="text" class="form-control" id="propose-departure" placeholder="Ex: Paris" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="propose-destination" class="form-label">Ville d'arrivée</label>
+                    <input type="text" class="form-control" id="propose-destination" placeholder="Ex: Lyon" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="propose-date" class="form-label">Date du trajet</label>
+                    <input type="date" class="form-control" id="propose-date" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="propose-time" class="form-label">Heure de départ</label>
+                    <input type="time" class="form-control" id="propose-time" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="propose-price" class="form-label">Prix par place (€)</label>
+                    <input type="number" class="form-control" id="propose-price" placeholder="Ex: 30" min="0" step="0.5" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="propose-seats" class="form-label">Places restantes</label>
+                    <input type="number" class="form-control" id="propose-seats" placeholder="Ex: 3" min="1" required>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h4>Détails et préférences du trajet</h4>
+                <div id="propose-car-info" class="alert alert-info">
+                    <p class="mb-1"><strong>Votre véhicule :</strong> <span id="car-model-display">Modèle de la voiture (depuis profil)</span></p>
+                    <p class="mb-1"><strong>Écologique :</strong> <span id="car-eco-display">Oui/Non (depuis profil)</span> <i class="fas fa-leaf text-success"></i></p>
+                    <p class="mb-0"><strong>Préférences de trajet :</strong> <span id="user-prefs-display">Fumeur accepté, Animaux, Musique (depuis profil)</span></p>
+                    <small class="text-muted">Ces informations proviennent de votre profil. <a href="/account">Modifier mon profil</a></small>
+                </div>
+
+                <div class="mt-3">
+                    <label for="propose-details" class="form-label">Commentaires ou précisions</label>
+                    <textarea class="form-control" id="propose-details" rows="3" placeholder="Ex: Point de rendez-vous précis, bagages acceptés, etc."></textarea>
+                 </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Proposer le trajet</button>
+            </div>
+        </form>
+    </div>
+</section>
