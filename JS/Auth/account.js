@@ -1,4 +1,4 @@
-       // Récupère les éléments du sélecteur de rôle et du formulaire chauffeur
+// Récupère les éléments du sélecteur de rôle et du formulaire chauffeur
     const userRoleSelect = document.getElementById('user-role');
     const chauffeurForm = document.getElementById('chauffeur-form');
 
@@ -50,3 +50,12 @@
             settingsFormContainer.style.display = 'none';
         }
     });
+
+        // Attache le bouton de déconnexion
+const logoutBtn = document.getElementById('logout-btn');
+
+if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+        logout(); // Cette fonction vient de script.js, qui est global
+    });
+}

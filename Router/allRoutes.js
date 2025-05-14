@@ -2,14 +2,14 @@ import Route from "./Route.js";
 
 //Définir toutes nos routes
 export const allRoutes = [
-    new Route("/" , "Accueil", "/Pages/home.html"),
-    new Route("/connexion" , "Connexion", "/Pages/Auth/connexion.html", "/JS/Auth/connexion.js"),
-    new Route("/register" , "S'enregistrer", "/Pages/Auth/register.html", "/JS/Auth/register.js"),
-    new Route("/account" , "Mon profil", "Pages/Auth/account.html", "JS/Auth/account.js"),
-    new Route("/covoiturage" , "Covoiturage", "/Pages/covoiturage.html", "/JS/covoiturage.js"),
-    new Route("/rider" , "Proposer un trajet", "/Pages/rider.html", "/JS/rider.js"),
-    new Route("/detailsRide" , "Détails covoiturage", "/Pages/detailsRide.html", "/JS/detailsRide.js"),
-    new Route("/contact" , "Contact", "/Pages/contact.html"),
+    new Route("/" , "Accueil", "/Pages/home.html", []),
+    new Route("/connexion" , "Connexion", "/Pages/Auth/connexion.html", "/JS/Auth/connexion.js", ["disconnected"]),
+    new Route("/register" , "S'enregistrer", "/Pages/Auth/register.html", "/JS/Auth/register.js", ["disconnected"]),
+    new Route("/account" , "Mon profil", "Pages/Auth/account.html", "JS/Auth/account.js", ["connected", "admin"]),
+    new Route("/covoiturage" , "Covoiturage", "/Pages/covoiturage.html", "/JS/covoiturage.js", []),
+    new Route("/rider" , "Proposer un trajet", "/Pages/rider.html", "/JS/rider.js", ["connected" ,"admin"]),
+    new Route("/detailsRide" , "Détails covoiturage", "/Pages/detailsRide.html", "/JS/detailsRide.js", []),
+    new Route("/contact" , "Contact", "/Pages/contact.html", []),
 ];
 
 //Le titre s'affiche comme ceci : Route.titre = websitename

@@ -7,25 +7,51 @@
   <div class="mb-3">
     <label for="NomInput" class="form-label">Nom</label>
     <input type="text" class="form-control" id="NomInput" placeholder="Votre Nom">
-  </div>
+    <div class="invalid-feedback">
+        Le nom est requis
+    </div>
+    <div class="valid-feedback">
+        Nom conforme
+    </div>
     <div class="mb-3">
     <label for="PrenomInput" class="form-label">Prénom</label>
     <input type="text" class="form-control" id="PrenomInput" placeholder="Votre Prénom">
-  </div>
+    <div class="invalid-feedback">
+        Le prénom est requis
+    </div>
+    <div class="valid-feedback">
+        Prénom conforme
+    </div>
   <div class="mb-3">
     <label for="EmailInput" class="form-label">Email</label>
     <input type="email" class="form-control" id="EmailInput" placeholder="Entrez votre email">
-  </div>
+    <div class="invalid-feedback">
+        L'Email n'est pas au bon format
+    </div>
+    <div class="valid-feedback">
+        Email conforme
+    </div>
   <div class="mb-3">
     <label for="PasswordInput" class="form-label">Mot de passe</label>
-    <input type="password" class="form-control" id="PasswordInput">
+    <input type="password" class="form-control" id="PasswordInput" placeholder="Entrez votre mot de passe">
+    <div class="invalid-feedback">
+        Au moins : 8 caractères , 1 Maj , 1 caractère spécial , 1 chiffre
+    </div>
+    <div class="valid-feedback">
+        Mot de passe conforme
+    </div>
   </div>
     <div class="mb-3">
     <label for="ValidatePasswordInput" class="form-label">Validez votre mot de passe</label>
-    <input type="password" class="form-control" id="ValidatePasswordInput">
-  </div>
+    <input type="password" class="form-control" id="ValidatePasswordInput" placeholder="Confirmez votre mot de passe">
+    <div class="invalid-feedback">
+        Vous n'avez pas le même mot de passe
+    </div>
+    <div class="valid-feedback">
+        Mot de passe conforme
+    </div>
   <div class="text-center">
-  <button type="submit" class="btn btn-primary">S'enregistrer</button>
+  <button type="submit" class="btn btn-primary" id="btn-validate-register">S'enregistrer</button>
   </div>
   <div class="text-center pt-3 pb-3">
     <a href="/connexion">Vous avez déjà un compte ? Connectez-vous!</a>

@@ -28,9 +28,12 @@
                   <a class="nav-link text-dark fs-5" href="/contact">Contact</a>
                 </li>
               </ul>
-              <div class="d-flex ms-auto">
+              <div class="d-flex ms-auto" data-show="disconnected">
                 <a class="btn btn-success me-2 fs-5" href="/connexion">Se connecter</a>
                 <a class="btn btn-outline-success fs-5" href="/register">S'inscrire</a>
+              </div>
+              <div class="d-flex ms-auto" data-show="connected">
+                <a class="btn btn-success me-2 fs-5" href="/account">Mon profil</a>
               </div>
             </div>
           </div>
@@ -47,7 +50,7 @@
         <p><a href="/mentions-legales" class="text-dark">Mentions Légales</a></p>
       </div>
     </footer>
-
+    <script src="JS/script.js"></script>
     <script type="module" src="Router/Router.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
